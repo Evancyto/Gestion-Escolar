@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión Escolar</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Gestión Escolar</h1>
+        <p>Organiza y administra tus actividades escolares</p>
+    </header>
+
+    <main>
+
+
+        <section class="contenedor">
+
+            <h2>Registrar actividad</h2>
+
+            <form id="formularioActividad">
+
+                <label for="nombre">Nombre de la actividad:</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ej. Investigar la fotosíntesis"
+                    required
+                >
+
+                <label for="materia">Materia:</label>
+                <input
+                    type="text"
+                    id="materia"
+                    name="materia"
+                    placeholder="Ej. Biología"
+                    required
+                >
+
+                <label for="prioridad">Prioridad:</label>
+                <select id="prioridad" name="prioridad" required>
+                    <option value="">Selecciona una prioridad</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+
+                <button type="submit">Registrar actividad</button>
+
+            </form>
+
+            <p id="mensaje"></p>
+
+        </section>
+
+
+        <section class="contenedor">
+
+            <h2>Mis actividades</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Actividad</th>
+                        <th>Materia</th>
+                        <th>Estado</th>
+                        <th>Prioridad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaActividades">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>
